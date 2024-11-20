@@ -1,8 +1,7 @@
 import tkinter as tk
-
-
 window=tk.Tk()
 window.title("What Franciscan sterotype are you?")
+
 
 
 label1=tk.Label(master=window,text="What intramural sport would you play?", width=50, height=10)
@@ -239,7 +238,7 @@ b4.grid(row=1, column=1, sticky="nsew")
 
 
 
-label1=tk.Label(master=window,text="What's your major?", width=50, height=10)
+label1=tk.Label(master=window,text="What do you do in your freetime?", width=50, height=10)
 label1.pack()
 
 f1=tk.Frame(master=window)
@@ -248,21 +247,21 @@ f1.pack(fill=tk.BOTH, expand=True)
 f1.rowconfigure([0,1], minsize=20, weight=1)
 f1.columnconfigure([0,1], minsize=20, weight=1)
 
-b1=tk.Button(master=f1, text="TheoCat", height=10)
+b1=tk.Button(master=f1, text="Read spiritual boooks outside", height=10)
 b1.grid(row=0, column=0, sticky="nsew")
 
-b2=tk.Button(master=f1, text="Nursing")
+b2=tk.Button(master=f1, text="Go on long walks with your Frannie significant other")
 b2.grid(row=0, column=1, sticky="nsew")
 
-b3=tk.Button(master=f1, text="Education", height=10)
+b3=tk.Button(master=f1, text="Always studying", height=10)
 b3.grid(row=1, column=0, sticky="nsew")
 
-b4=tk.Button(master=f1, text="Psych")
+b4=tk.Button(master=f1, text="I'm a JC rat")
 b4.grid(row=1, column=1, sticky="nsew")
 
 
 
-label1=tk.Label(master=window,text="What's your major?", width=50, height=10)
+label1=tk.Label(master=window,text="How often do you go to Latin Mass?", width=50, height=10)
 label1.pack()
 
 f1=tk.Frame(master=window)
@@ -271,17 +270,53 @@ f1.pack(fill=tk.BOTH, expand=True)
 f1.rowconfigure([0,1], minsize=20, weight=1)
 f1.columnconfigure([0,1], minsize=20, weight=1)
 
-b1=tk.Button(master=f1, text="TheoCat", height=10)
+b1=tk.Button(master=f1, text="Every other month", height=10)
 b1.grid(row=0, column=0, sticky="nsew")
 
-b2=tk.Button(master=f1, text="Nursing")
+b2=tk.Button(master=f1, text="Every single day")
 b2.grid(row=0, column=1, sticky="nsew")
 
-b3=tk.Button(master=f1, text="Education", height=10)
+b3=tk.Button(master=f1, text="When my friends go", height=10)
 b3.grid(row=1, column=0, sticky="nsew")
 
-b4=tk.Button(master=f1, text="Psych")
+b4=tk.Button(master=f1, text="Never")
 b4.grid(row=1, column=1, sticky="nsew")
+
+
+
+label1=tk.Label(master=window,text="Are you working at a summer camp or getting an internship this summer?", width=50, height=10)
+label1.pack()
+
+f1=tk.Frame(master=window)
+f1.pack(fill=tk.BOTH, expand=True)
+
+f1.rowconfigure([0], minsize=20, weight=1)
+f1.columnconfigure([0, 1], minsize=20, weight=1)
+
+b1=tk.Button(master=f1, text="Summer camp", height=10)
+b1.grid(row=0, column=0, sticky="nsew")
+
+b2=tk.Button(master=f1, text="Internship/working")
+b2.grid(row=0, column=1, sticky="nsew")
+
+
+
+
+label1=tk.Label(master=window,text="Matt Fradd or Jordan Peterson?", width=50, height=10)
+label1.pack()
+
+f1=tk.Frame(master=window)
+f1.pack(fill=tk.BOTH, expand=True)
+
+f1.rowconfigure([0], minsize=20, weight=1)
+f1.columnconfigure([0,1], minsize=20, weight=1)
+
+b1=tk.Button(master=f1, text="Matt Fradd", height=10)
+b1.grid(row=0, column=0, sticky="nsew")
+
+b2=tk.Button(master=f1, text="Jordan Peterson")
+b2.grid(row=0, column=1, sticky="nsew")
+
 
 
 window.mainloop()
