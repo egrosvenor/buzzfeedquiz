@@ -19,23 +19,39 @@ questions = [
 ]
 
 f1=tk.Frame(master=window)
-
 f1.pack(fill=tk.BOTH, expand=True)
 
-f1.rowconfigure([0,1], minsize=20, weight=1)
-f1.columnconfigure([0,1], minsize=20, weight=1)
+canvas=tk.Canvas(f1)
+canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+scrollbar=tk.Scrollbar(f1, orient="vertical", command=canvas.yview)
+scrollbar.pack(side=tk.RIGHT, fill="y")
+
+canvas.configure(yscrollcommand=scrollbar.set)
+
+content_frame=tk.Frame(canvas)
+
+canvas.create_window((0,0), window=content_frame, anchor="nw")
 
 def create_question(question):
-    label=tk.Label(master=f1,text=question["label"], width=50, height=10)
+    label=tk.Label(master=content_frame,text=question["label"], width=40, height=5)
     label.pack(pady=2)
+
+    button_frame=tk.Frame(master=content_frame)
+    button_frame.pack(fill=tk.X, padx=10, pady=5)
+
+
     for button_text in question["buttons"]:
-        button=tk.Button(master=f1, text=button_text)
-        button.pack()
+        button=tk.Button(master=button_frame, text=button_text, height=5, width=15)
+        button.pack(side=tk.LEFT, padx=5)
 
 
         
 for x in questions:
     create_question(x)
+
+content_frame.update_idletasks()
+canvas.config(scrollregion=canvas.bbox("all"))
 
 window.mainloop()
 
