@@ -33,6 +33,7 @@ content_frame=tk.Frame(canvas)
 
 canvas.create_window((0,0), window=content_frame, anchor="nw")
 
+
 def create_question(question):
     label=tk.Label(master=content_frame,text=question["label"], width=40, height=5)
     label.pack(pady=2)
@@ -42,7 +43,7 @@ def create_question(question):
 
 
     for button_text in question["buttons"]:
-        button=tk.Button(master=button_frame, text=button_text, height=5, width=15)
+        button=tk.Button(master=button_frame, text=button_text, height=5, width=15, command=check())
         button.pack(side=tk.LEFT, padx=5)
 
 
