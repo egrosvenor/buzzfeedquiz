@@ -4,6 +4,7 @@ window.title("What Franciscan sterotype are you?")
 
 
 
+
 label1=tk.Label(master=window,text="What intramural sport would you play?", width=50, height=10)
 label1.pack()
 
