@@ -43,7 +43,7 @@ def create_question(question):
 
 
     for button_text in question["buttons"]:
-        button=tk.Button(master=button_frame, text=button_text, height=5, width=15, command=check())
+        button=tk.Button(master=button_frame, text=button_text, height=5, width=15)
         button.pack(side=tk.LEFT, padx=5)
 
 
