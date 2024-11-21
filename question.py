@@ -29,14 +29,9 @@ def create_question(question):
     label=tk.Label(master=f1,text=question["label"], width=50, height=10)
     label.pack(pady=2)
     for button_text in question["buttons"]:
-        row=0
-        col=0
         button=tk.Button(master=f1, text=button_text)
-        button.grid(row=row, column=col)
-        if col==1:
-            row+=1
-        if col<1:
-            col+=1
+        button.pack()
+
 
         
 for x in questions:

@@ -45,34 +45,12 @@ b1.grid(row=0, column=0, sticky="nsew")
 b2=tk.Button(master=f1, text="Fishers")
 b2.grid(row=0, column=1, sticky="nsew")
 
-b3=tk.Button(master=f1, text="Guardians", height=10)
+b3=tk.Button(master=f1, text="DDM", height=10)
 b3.grid(row=1, column=0, sticky="nsew")
 
-b4=tk.Button(master=f1, text="Disciples")
+b4=tk.Button(master=f1, text="Stella")
 b4.grid(row=1, column=1, sticky="nsew")
 
-
-
-label1=tk.Label(master=window,text="Choose a household", width=50, height=10)
-label1.pack()
-
-f1=tk.Frame(master=window)
-f1.pack(fill=tk.BOTH, expand=True)
-
-f1.rowconfigure([0,1], minsize=20, weight=1)
-f1.columnconfigure([0,1], minsize=20, weight=1)
-
-b1=tk.Button(master=f1, text="AMDG", height=10)
-b1.grid(row=0, column=0, sticky="nsew")
-
-b2=tk.Button(master=f1, text="Fishers")
-b2.grid(row=0, column=1, sticky="nsew")
-
-b3=tk.Button(master=f1, text="Guardians", height=10)
-b3.grid(row=1, column=0, sticky="nsew")
-
-b4=tk.Button(master=f1, text="Disciples")
-b4.grid(row=1, column=1, sticky="nsew")
 
 
 
