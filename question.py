@@ -26,16 +26,35 @@ f1.rowconfigure([0,1], minsize=20, weight=1)
 f1.columnconfigure([0,1], minsize=20, weight=1)
 
 def create_question(question):
-    row=0
-    col=0
     label=tk.Label(master=f1,text=question["label"], width=50, height=10)
     label.pack(pady=2)
     for button_text in question["buttons"]:
-        button=tk.Button(master=f1, text=button_text, height=10)
-        button.pack()
+        row=0
+        col=0
+        button=tk.Button(master=f1, text=button_text)
+        button.grid(row=row, column=col)
+        if col==1:
+            row+=1
+        if col<1:
+            col+=1
+
         
 for x in questions:
     create_question(x)
 
 window.mainloop()
 
+
+i=0
+
+def one_point():
+    i=+1
+
+def two_point():
+    i=+2
+
+def three_point():
+    i=+3
+
+def four_point():
+    i=+4
