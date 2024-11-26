@@ -57,6 +57,9 @@ canvas.config(scrollregion=canvas.bbox("all"))
 window.mainloop()
 
 
+
+
+
 i=0
 
 def one_point():

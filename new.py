@@ -8,8 +8,21 @@ window.title("What Franciscan sterotype are you?")
 label1=tk.Label(master=window,text="What intramural sport would you play?", width=50, height=10)
 label1.pack()
 
-f1=tk.Frame(master=window)
+i=0
 
+def one_point():
+    i=+1
+
+def two_point():
+    i=+2
+
+def three_point():
+    i=+3
+
+def four_point():
+    i=+4
+
+f1=tk.Frame(master=window)
 f1.pack(fill=tk.BOTH, expand=True)
 
 f1.rowconfigure([0,1], minsize=20, weight=1)
@@ -295,7 +308,5 @@ b1.grid(row=0, column=0, sticky="nsew")
 
 b2=tk.Button(master=f1, text="Jordan Peterson")
 b2.grid(row=0, column=1, sticky="nsew")
-
-
 
 window.mainloop()
