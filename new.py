@@ -128,7 +128,7 @@ b1.grid(row=0, column=0, sticky="nsew")
 b2=tk.Button(master=f6, text="10:00 am ")
 b2.grid(row=0, column=1, sticky="nsew")
 
-b3=tk.Button(master=f6, text="Noon")
+b3=tk.Button(master=f6, text="Noon", height=10)
 b3.grid(row=1, column=0, sticky="nsew")
 
 b4=tk.Button(master=f6, text="8 pm")
@@ -194,7 +194,7 @@ f9.columnconfigure([0,1], minsize=20, weight=1)
 b1=tk.Button(master=f9, text="Read spiritual boooks outside", height=10)
 b1.grid(row=0, column=0, sticky="nsew")
 
-b2=tk.Button(master=f9, text="Go on long walks with your Frannie significant other")
+b2=tk.Button(master=f9, text="Go on long walks with \n your Frannie significant other")
 b2.grid(row=0, column=1, sticky="nsew")
 
 b3=tk.Button(master=f9, text="Always studying", height=10)
