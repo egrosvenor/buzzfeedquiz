@@ -18,75 +18,52 @@ content_frame=tk.Frame(canvas)
 
 canvas.create_window((0,0), window=content_frame, anchor="nw")
 
-label1=tk.Label(master=window,text="What intramural sport would you play?", width=50, height=10)
+
+
+label1=tk.Label(master=content_frame,text="What intramural sport would you play?", width=50, height=10)
 label1.pack()
 
-answer_one=0
-answer_two=0
-answer_three=0
-answer_four=0
-answer_five=0
-answer_six=0
-
-def answer_one():
-    pass
-
-def answer_two():
-    pass
-
-def answer_three():
-    pass
-
-def answer_four():
-    pass
-
-def answer_five():
-    pass
-
-def answer_six():
-    pass
-
-f1=tk.Frame(master=window)
+f1=tk.Frame(master=content_frame)
 f1.pack(fill=tk.BOTH, expand=True)
 
 f1.rowconfigure([0,1], minsize=20, weight=1)
 f1.columnconfigure([0,1], minsize=20, weight=1)
 
-b1=tk.Button(master=f1, text="ultimate frisbee", height=10)
-b1.grid(row=0, column=0, sticky="nsew")
+b11=tk.Button(master=f1, text="ultimate frisbee", height=10)
+b11.grid(row=0, column=0, sticky="nsew")
 
-b2=tk.Button(master=f1, text="volleyball")
-b2.grid(row=0, column=1, sticky="nsew")
+b12=tk.Button(master=f1, text="volleyball")
+b12.grid(row=0, column=1, sticky="nsew")
 
-b3=tk.Button(master=f1, text="soccer", height=10)
-b3.grid(row=1, column=0, sticky="nsew")
+b13=tk.Button(master=f1, text="soccer", height=10)
+b13.grid(row=1, column=0, sticky="nsew")
 
-b4=tk.Button(master=f1, text="I don't play sports")
-b4.grid(row=1, column=1, sticky="nsew")
-
-
+b14=tk.Button(master=f1, text="I don't play sports")
+b14.grid(row=1, column=1, sticky="nsew")
 
 
-label1=tk.Label(master=window,text="Choose a household", width=50, height=10)
-label1.pack()
 
-f1=tk.Frame(master=window)
-f1.pack(fill=tk.BOTH, expand=True)
 
-f1.rowconfigure([0,1], minsize=20, weight=1)
-f1.columnconfigure([0,1], minsize=20, weight=1)
+label2=tk.Label(master=content_frame,text="Choose a household", width=50, height=10)
+label2.pack()
 
-b1=tk.Button(master=f1, text="AMDG", height=10)
-b1.grid(row=0, column=0, sticky="nsew")
+f2=tk.Frame(master=content_frame)
+f2.pack(fill=tk.BOTH, expand=True)
 
-b2=tk.Button(master=f1, text="Fishers")
-b2.grid(row=0, column=1, sticky="nsew")
+f2.rowconfigure([0,1], minsize=20, weight=1)
+f2.columnconfigure([0,1], minsize=20, weight=1)
 
-b3=tk.Button(master=f1, text="DDM", height=10)
-b3.grid(row=1, column=0, sticky="nsew")
+b21=tk.Button(master=f1, text="AMDG", height=10)
+b21.grid(row=0, column=0, sticky="nsew")
 
-b4=tk.Button(master=f1, text="Stella")
-b4.grid(row=1, column=1, sticky="nsew")
+b22=tk.Button(master=f1, text="Fishers")
+b22.grid(row=0, column=1, sticky="nsew")
+
+b23=tk.Button(master=f1, text="DDM", height=10)
+b23.grid(row=1, column=0, sticky="nsew")
+
+b24=tk.Button(master=f1, text="Stella")
+b24.grid(row=1, column=1, sticky="nsew")
 
 
 

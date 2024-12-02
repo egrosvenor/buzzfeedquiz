@@ -112,3 +112,30 @@ if 30<=i<35:
 
 if 35<=i<40:
     pass
+
+
+
+answer_one=0
+answer_two=0
+answer_three=0
+answer_four=0
+answer_five=0
+answer_six=0
+
+def answer_one():
+    pass
+
+def answer_two():
+    pass
+
+def answer_three():
+    pass
+
+def answer_four():
+    pass
+
+def answer_five():
+    pass
+
+def answer_six():
+    pass
