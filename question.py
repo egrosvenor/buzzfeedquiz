@@ -74,7 +74,7 @@ def create_question(question):
     label.pack(pady=2)
 
     button_frame=tk.Frame(master=content_frame)
-    button_frame.pack(fill=tk.X, padx=10, pady=5)
+    button_frame.pack(fill=tk.X)
 
 
     for button_text in question["buttons"]:
