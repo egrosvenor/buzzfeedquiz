@@ -3,6 +3,21 @@ window=tk.Tk()
 window.title("What Franciscan sterotype are you?")
 
 
+f1=tk.Frame(master=window)
+f1.pack(fill=tk.BOTH, expand=True)
+
+canvas=tk.Canvas(f1)
+canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+scrollbar=tk.Scrollbar(f1, orient="vertical", command=canvas.yview)
+scrollbar.pack(side=tk.RIGHT, fill="y")
+
+canvas.configure(yscrollcommand=scrollbar.set)
+
+content_frame=tk.Frame(canvas)
+
+canvas.create_window((0,0), window=content_frame, anchor="nw")
+
 label1=tk.Label(master=window,text="What intramural sport would you play?", width=50, height=10)
 label1.pack()
 
@@ -37,7 +52,7 @@ f1.pack(fill=tk.BOTH, expand=True)
 f1.rowconfigure([0,1], minsize=20, weight=1)
 f1.columnconfigure([0,1], minsize=20, weight=1)
 
-b1=tk.Button(master=f1, text="ultimate frisbee", height=10, command=)
+b1=tk.Button(master=f1, text="ultimate frisbee", height=10)
 b1.grid(row=0, column=0, sticky="nsew")
 
 b2=tk.Button(master=f1, text="volleyball")
@@ -317,5 +332,10 @@ b1.grid(row=0, column=0, sticky="nsew")
 
 b2=tk.Button(master=f1, text="Jordan Peterson")
 b2.grid(row=0, column=1, sticky="nsew")
+
+
+
+content_frame.update_idletasks()
+canvas.config(scrollregion=canvas.bbox("all"))
 
 window.mainloop()
