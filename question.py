@@ -98,20 +98,6 @@ if 10<=i<15:
     window.title("You are...")
     window.mainloop()
 
-if 15<=i<20:
-    pass
-
-if 20<=i<25:
-    pass
-
-if 25<=i<30:
-    pass
-
-if 30<=i<35:
-    pass
-
-if 35<=i<40:
-    pass
 
 
 
@@ -139,3 +125,25 @@ def answer_five():
 
 def answer_six():
     pass
+
+
+
+# use this 
+## import tkinter as tk
+
+# border_effects = {
+#   "sunken": tk.SUNKEN,
+ #   "raised": tk.RAISED,
+ #   "groove": tk.GROOVE,
+ #   "ridge": tk.RIDGE,
+#}
+
+#window = tk.Tk()
+
+#for relief_name, relief in border_effects.items():
+   # frame = tk.Frame(master=window, relief=relief, borderwidth=5)
+   # frame.pack(side=tk.LEFT)
+   # label = tk.Label(master=frame, text=relief_name)
+   # label.pack()
+
+#window.mainloop()
