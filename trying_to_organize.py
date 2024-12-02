@@ -35,6 +35,39 @@ content_frame=tk.Frame(canvas)
 canvas.create_window((0,0), window=content_frame, anchor="nw")
 
 
+i=0
+
+def one_point():
+    global i
+    i+=1
+
+def two_point():
+    global i
+    i+=2
+
+def three_point():
+    global i
+    i+=3
+
+def four_point():
+    global i
+    i+=4
+
+list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "cereal and ice cream", "Dorm","Go on a walk with my Franny significant other", "every single day", "Mission Trip!!" ]
+list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "stir fry", "Library", "Reading outside", "every other month", "Working at Summer Camp"]
+list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an internship/working" ]
+list4=["AMDG", "volleyball", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
+
+def fun(x):
+    if x in list1:
+        one_point()
+    elif x in list2:
+        two_point()
+    elif x in list3:
+        three_point()
+    elif x in list4: 
+        four_point()
+    print(f"Your score is {i}")
 
 
 for x in questions:
@@ -45,7 +78,7 @@ for x in questions:
     Frame.pack(fill=tk.X, side=tk.TOP)
 
     for b in questions[x]:
-        button=tk.Button(master=Frame, text=b, height=7, width=16)
+        button=tk.Button(master=Frame, text=b, height=7, width=16, command=lambda x=b: fun(x))
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
