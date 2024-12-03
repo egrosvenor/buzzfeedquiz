@@ -34,43 +34,75 @@ canvas.create_window((0,0), window=content_frame, anchor="nw")
 
 
 
+a=0
+b=0
+c=0
+d=0
 
-i=0
 
-def one_point():
-    global i
-    i+=1
+def twoPDP():
+    global a
+    a+=2
 
-def two_point():
-    global i
-    i+=2
+def twoFOP():
+    global b
+    b+=2
 
-def three_point():
-    global i
-    i+=3
+def twofloater():
+    global d
+    d+=2
 
-def four_point():
-    global i
-    i+=4
+def twoAMDG():
+    global c
+    c+=2
 
-list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "cereal and ice cream", "Dorm","Go on a walk with my Franny significant other", "every single day", "Mission Trip!!" ]
-list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "stir fry", "Library", "Reading outside", "every other month", "Working at Summer Camp"]
-list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an internship/working" ]
+def onePDP():
+    global a
+    a+=1
+
+def oneFOP():
+    global b
+    b+=1
+
+def onefloater():
+    global c
+    c+=1
+
+def oneAMDG():
+    global d
+    d+=1
+
+
+
+list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "stir fry", "Dorm","Go on a walk with \n my Franny significant other", "every single day", "Working at Summer Camp" ]
+list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "cereal and ice crea", "Library", "Library", "Reading outside", "every other month", "Mission Trip!!"]
+list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an \n internship/working" ]
 list4=["AMDG", "volleyball", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
 
-
-
+list5=["DDM", "Dr. Reinhard", "Library", "Reading outside", "Mission Trip!!", "ultimate frisbee", "psych", "Noon", "chicken and rice", "every other month"]
+list6=["Fishers", "Scott Hahn", "theocat", "6:30 AM", "Dorm", "Go on a walk with \n my Franny significant other", "every single day", "Always studying", "volleyball", "I do not know yet"]
+list7=["no intramurals for me", "Working at Summer Camp", "AMDG", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never" ]
+list8=["stir fry", "cereal and ice creal", "soccer",  "Stella", "Dr. Kuebler", "nursing", "CTT", "Getting an \n internship/working", "10:00 AM", "when my friends go"]
 
 def fun(x):
     if x in list1:
-        one_point()
+        twoPDP()
     elif x in list2:
-        two_point()
+        twoFOP()
     elif x in list3:
-        three_point()
+        twofloater()
     elif x in list4: 
-        four_point()
-    print(f"Your score is {i}")
+        twoAMDG()
+    if x in list5:
+        onePDP()
+    elif x in list6:
+        oneFOP()
+    elif x in list7:
+        onefloater()
+    elif x in list8:
+        oneAMDG() 
+    print(f'{a}')
+
 
 
 for x in questions:
@@ -85,7 +117,7 @@ for x in questions:
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
-submit=tk.Button(master=content_frame, text="Sumbit", height=2, width=5)
+submit=tk.Button(master=content_frame, text="Sumbit Answers")
 submit.pack()
 
 
