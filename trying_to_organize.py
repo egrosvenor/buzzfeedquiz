@@ -73,7 +73,6 @@ def oneAMDG():
     d+=1
 
 
-
 list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "stir fry", "Dorm","Go on a walk with \n my Franny significant other", "every single day", "Working at Summer Camp" ]
 list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "cereal and ice crea", "Library", "Library", "Reading outside", "every other month", "Mission Trip!!"]
 list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an \n internship/working" ]
@@ -85,23 +84,34 @@ list7=["no intramurals for me", "Working at Summer Camp", "AMDG", "Dr. Knox", "B
 list8=["stir fry", "cereal and ice creal", "soccer",  "Stella", "Dr. Kuebler", "nursing", "CTT", "Getting an \n internship/working", "10:00 AM", "when my friends go"]
 
 def fun(x):
+    global a, b, c, d
     if x in list1:
         twoPDP()
+        
     elif x in list2:
         twoFOP()
+        
     elif x in list3:
         twofloater()
+        
     elif x in list4: 
         twoAMDG()
+        
+def fun2(x):
+    global a, b, c, d
     if x in list5:
         onePDP()
+        
     elif x in list6:
         oneFOP()
+        
     elif x in list7:
         onefloater()
+        
     elif x in list8:
         oneAMDG() 
-    print(f'{a}')
+      
+    print(f'PDP: {a}, FOP: {b}, Floater: {c}, AMDG: {d}')
 
 
 
@@ -112,8 +122,8 @@ for x in questions:
     Frame=tk.Frame(master=content_frame)
     Frame.pack(fill=tk.X, side=tk.TOP)
 
-    for b in questions[x]:
-        button=tk.Button(master=Frame, text=b, height=7, width=16, command=lambda x=b: fun(x))
+    for e in questions[x]:
+        button=tk.Button(master=Frame, text=e, height=7, width=16, command=lambda x=e: (fun(x), fun2(x)))
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
