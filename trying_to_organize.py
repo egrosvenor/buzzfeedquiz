@@ -14,8 +14,6 @@ questions={
 }
 
 
-
-
 window=tk.Tk()
 window.title("Which Franciscan steorotype are you?")
 
@@ -33,6 +31,8 @@ canvas.configure(yscrollcommand=scrollbar.set)
 content_frame=tk.Frame(canvas)
 
 canvas.create_window((0,0), window=content_frame, anchor="nw")
+
+
 
 
 i=0
@@ -58,6 +58,9 @@ list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "stir fry
 list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an internship/working" ]
 list4=["AMDG", "volleyball", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
 
+
+
+
 def fun(x):
     if x in list1:
         one_point()
@@ -82,7 +85,8 @@ for x in questions:
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
-
+submit=tk.Button(master=content_frame, text="Sumbit", height=2, width=5)
+submit.pack()
 
 
 content_frame.update_idletasks()
