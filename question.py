@@ -54,11 +54,12 @@ b=0
 c=0
 d=0
 
-def change_color():
-    button.config(bg="red")
 
 
 def fun(x):
+     
+    button.config(bg="red")
+
     print(x)
 
 
@@ -115,7 +116,7 @@ for x in questions:
     Frame.pack(fill=tk.X, side=tk.TOP)
 
     for e in questions[x]:
-        button=tk.Button(master=Frame, text=e, height=7, width=20, bg="pink", command=lambda x=e: (fun(x), change_color()), font=("Courier", 12))
+        button=tk.Button(master=Frame, text=e, height=7, width=20, bg="pink", command=lambda x=e: fun(x), font=("Courier", 12))
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
