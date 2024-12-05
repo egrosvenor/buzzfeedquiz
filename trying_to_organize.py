@@ -1,5 +1,5 @@
 import tkinter as tk
-
+from PIL import Image, ImageTk
 
 questions={
     'What sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
@@ -118,8 +118,14 @@ def answer():
         print("You are a PDP boy/homeschooled girl")
         window=tk.Tk()
         window.title("You are ....")
-        Label=tk.Label(master=window, text="PDP boy/homeschooled girl", height=30, width=30)
+        window.minsize(500,500)
+        Label=tk.Label(master=window, text="PDP boy/homeschooled girl", height=12, width=12)
         Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        Label=tk.Label(master=window, text="You enjoy long walks to the chapel and liturgy of the hours. Welcome to Franciscan!", height=5, width=12)
+        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window = Image.open("Chapel-2-1 (1).jpg")
+        label = tk.Label(Image)
+        label.pack(window)
         window.mainloop()
     elif b>a and b>c and b>d:
         print("You are that one passionate missionary kid/FOP lover")
