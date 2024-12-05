@@ -1,22 +1,24 @@
 import tkinter as tk
+from tkinter import font
+
+
+questions={
+    'What sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
+    'Choose a Household': ['AMDG', 'Fishers', 'DDM', 'Stella'],
+    'Favorite Professor?': ['Scott Hahn', 'Dr. Reinhard', 'Dr. Kuebler', 'Dr. Knox'],
+    'What is your major?':['theocat', 'nursing', 'business', 'psych'],
+    'Favorite Mass time?': ['6:30 AM', '10:00 AM', 'Noon', '8:00 PM'],
+    'Favorite Caf meal?': ['pizza', 'stir fry', 'cereal and ice cream', 'chicken and rice'],
+    'What is your favorite place to study?': ['CTT', 'Library', 'JC', 'Dorm'],
+    'What do you do in your free time?' : ['Reading outside', 'Go on a walk with \n my Franny significant \n other', 'Always studying', 'I am a JC rat'],
+    'How often do you go to Latin mass?': ['every other month', 'every single day', 'never', 'when my friends go'],
+    'What are you doing this summer?': ['Mission Trip!!', 'Working at Summer Camp', 'Getting an \n internship/working', 'I do not know yet']
+}
 
 
 window=tk.Tk()
 window.title("Which Franciscan steorotype are you?")
-
-
-questions = [
-    {'label': 'What sport do you play?', 'buttons': ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me']},
-    {'label': 'Choose a Household', 'buttons': ['AMDG', 'Fishers', 'DDM', 'Stella']},
-    {'label': 'Favorite Professor?', 'buttons': ['Scott Hahn', 'Dr. Reinhard', 'Dr. Kuebler', 'Dr. Knox']},
-    {'label': 'What is your major?', 'buttons': ['theocat', 'nursing', 'business', 'psych']},
-    {'label': 'Favorite Mass time?', 'buttons': ['6:30 AM', '10:00 AM', 'Noon', '8:00 PM']},
-    {'label': 'Favorite Caf meal?', 'buttons': ['pizza', 'stir fry', 'cereal and ice cream', 'chicken and rice']},
-    {'label': 'What is your favorite place to study?', 'buttons': ['CTT', 'Library', 'JC', 'Dorm']},
-    {'label': 'What do you do in your free time?', 'buttons': ['Reading outside', 'Go on a walk with my Franny significant other', 'Always studying', 'I am a JC rat']},
-    {'label': 'How often do you go to Latin mass?', 'buttons': ['every other month', 'every single day', 'never', 'when my friends go']},
-    {'label': 'What are you doing this summer?', 'buttons': ['Mission Trip!!', 'Working at Summer Camp', 'Getting an internship/working', 'I do not know yet']},
-]
+window.minsize(725,700)
 
 f1=tk.Frame(master=window)
 f1.pack(fill=tk.BOTH, expand=True)
@@ -27,102 +29,140 @@ canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 scrollbar=tk.Scrollbar(f1, orient="vertical", command=canvas.yview)
 scrollbar.pack(side=tk.RIGHT, fill="y")
 
-canvas.configure(yscrollcommand=scrollbar.set)
+canvas.configure(yscrollcommand=scrollbar.set, bg="dark green")
 
 content_frame=tk.Frame(canvas)
+content_frame.configure(bg="darkgreen")
 
 canvas.create_window((0,0), window=content_frame, anchor="nw")
 
 
-i=0
-
-def one_point():
-    global i
-    i=+1
-
-def two_point():
-    global i
-    i=+2
-
-def three_point():
-    global i
-    i=+3
-
-def four_point():
-    global i
-    i=+4
 
 
-list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "cereal and ice cream", "Dorm","Go on a walk with my Franny significant other", "every single day", "Mission Trip!!" ]
-list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "stir fry", "Library", "Reading outside", "every other month", "Working at Summer Camp"]
-list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an internship/working" ]
+list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "stir fry", "Dorm","Go on a walk with \n my Franny significant other", "every single day", "Working at Summer Camp" ]
+list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "cereal and ice crea", "Library", "Library", "Reading outside", "every other month", "Mission Trip!!"]
+list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an \n internship/working" ]
 list4=["AMDG", "volleyball", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
 
+list5=["DDM", "Dr. Reinhard", "Library", "Reading outside", "Mission Trip!!", "ultimate frisbee", "psych", "Noon", "chicken and rice", "every other month"]
+list6=["Fishers", "Scott Hahn", "theocat", "6:30 AM", "Dorm", "Go on a walk with \n my Franny significant \n other", "every single day", "Always studying", "volleyball", "I do not know yet"]
+list7=["no intramurals for me", "Working at Summer Camp", "AMDG", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never" ]
+list8=["stir fry", "cereal and ice cream", "soccer",  "Stella", "Dr. Kuebler", "nursing", "CTT", "Getting an \n internship/working", "10:00 AM", "when my friends go"]
+
+a=0
+b=0
+c=0
+d=0
+
+def change_color():
+    button.config(bg="red")
+
+
 def fun(x):
-    if x in list1:
-        one_point()
-    elif x in list2:
-        two_point()
-    elif x in list3:
-        three_point()
-    elif x in list4: 
-        four_point()
+    print(x)
+
+
+    global a, b, c, d
+
+    if x in list1 and x in list6:
+        a+=2
+        b+=1
+    elif x in list1 and x in list7:
+        a+=2
+        c+=1
+    elif x in list1 and x in list8:
+        a+=2
+        d+=1
+   
+    elif x in list2 and x in list5:
+        b+=2
+        a+=1
+    elif x in list2 and x in list7:
+        b+=2
+        c+=1
+    elif x in list2 and x in list8:
+        b+=2
+        d+=1
+   
+        
+    elif x in list3 and x in list5:
+        c+=2
+        a+=1
+    elif x in list3 and x in list6:
+        c+=2
+        b+=1
+    elif x in list3 and x in list8:
+        c+=2
+        d+=1
+
+    elif x in list4 and x in list5: 
+        d+=2
+        a+=1
+    elif x in list4 and x in list6: 
+        d+=2
+        b+=1
+    elif x in list4 and x in list7: 
+        d+=2
+        c+=1
     
 
-def create_question(question):
-    label=tk.Label(master=content_frame,text=question["label"], width=40, height=5)
-    label.pack(pady=2)
 
-    button_frame=tk.Frame(master=content_frame)
-    button_frame.pack(fill=tk.X)
-
-
-    for button_text in question["buttons"]:
-        button=tk.Button(master=button_frame, text=button_text, height=5, width=15, command=lambda: fun(button_text))
-        button.pack(side=tk.LEFT, padx=5)
-
-        
 for x in questions:
-    create_question(x)
+    Label=tk.Label(master=content_frame, text=x, height=5, font=("Courier", 14, "bold"), bg="dark green")
+    Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+    Frame=tk.Frame(master=content_frame)
+    Frame.pack(fill=tk.X, side=tk.TOP)
+
+    for e in questions[x]:
+        button=tk.Button(master=Frame, text=e, height=7, width=20, bg="pink", command=lambda x=e: (fun(x), change_color()), font=("Courier", 12))
+        button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+
+
+def answer():
+    if a>b and a>c and a>d:
+        print("You are a PDP boy/homeschooled girl")
+        window=tk.Tk()
+        window.title("You are ....")
+        Label=tk.Label(master=window, text="PDP boy/homeschooled girl", height=30, width=30)
+        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window.mainloop()
+    elif b>a and b>c and b>d:
+        print("You are that one passionate missionary kid/FOP lover")
+        window=tk.Tk()
+        window.title("You are ....")
+        Label=tk.Label(master=window, text="That one passionate missionary kid/FOP lover", height=30, width=30)
+        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window.mainloop()
+    elif c>a and c>b and c>d:
+        print("You are a social floater")
+        window=tk.Tk()
+        window.title("You are ....")
+        Label=tk.Label(master=window, text="Social floater", height=30, width=30)
+        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window.mainloop()
+    elif d>a and d>b and d>c:
+        print("AMDG intent/Little Flowers intent")
+        window=tk.Tk()
+        window.title("You are ....")
+        Label=tk.Label(master=window, text="AMDG intent/Little Flowers intent", height=30, width=30)
+        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window.mainloop()
+    else:
+        print("You are a social floater")
+        window=tk.Tk()
+        window.title("You are ....")
+        Label=tk.Label(master=window, text="Social floater", height=30, width=30)
+        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window.mainloop()
+ 
+
+submit=tk.Button(master=content_frame, text="Sumbit Answers", command=answer, font=("Courier", 14, "bold"))
+submit.pack()
+    
 
 content_frame.update_idletasks()
 canvas.config(scrollregion=canvas.bbox("all"))
 
 window.mainloop()
-
-
-
-
-if 10<=i<15:
-    window=tk.Tk()
-    window.title("You are...")
-    window.mainloop()
-
-
-
-
-answer_one=0
-answer_two=0
-answer_three=0
-answer_four=0
-answer_five=0
-answer_six=0
-
-def answer_one():
-    pass
-
-def answer_two():
-    pass
-
-def answer_three():
-    pass
-
-def answer_four():
-    pass
-
-def answer_five():
-    pass
-
-def answer_six():
-    pass
-
