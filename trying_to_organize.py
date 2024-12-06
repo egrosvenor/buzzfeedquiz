@@ -1,5 +1,6 @@
 import tkinter as tk
-from PIL import Image, ImageTk
+from tkinter import PhotoImage
+# from PIL import Image, ImageTk
 
 questions={
     'What sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
@@ -114,46 +115,48 @@ for x in questions:
 
 
 def answer():
+    global window
+    window.destroy()
     if a>b and a>c and a>d:
         print("You are a PDP boy/homeschooled girl")
-        window=tk.Tk()
-        window.title("You are ....")
-        window.minsize(500,500)
-        Label=tk.Label(master=window, text="PDP boy/homeschooled girl", height=12, width=12)
+        window1=tk.Tk()
+        window1.title("You are ....")
+        window1.minsize(500,500)
+        Label=tk.Label(master=window1, text="PDP boy/homeschooled girl", height=12, width=12)
         Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-        Label=tk.Label(master=window, text="You enjoy long walks to the chapel and liturgy of the hours. Welcome to Franciscan!", height=5, width=12)
-        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-        window = Image.open("Chapel-2-1 (1).jpg")
-        label = tk.Label(Image)
-        label.pack(window)
-        window.mainloop()
+        img = PhotoImage(file="Chapel-2-1.png")
+        label = tk.Label(window1, image=img)
+        label.pack()
+        Label4=tk.Label(master=window1, text="You enjoy long walks to the chapel and liturgy of the hours. Welcome to Franciscan!", height=5, width=12)
+        Label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        window1.mainloop()
     elif b>a and b>c and b>d:
         print("You are that one passionate missionary kid/FOP lover")
         window=tk.Tk()
         window.title("You are ....")
-        Label=tk.Label(master=window, text="That one passionate missionary kid/FOP lover", height=30, width=30)
-        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        Label2=tk.Label(master=window, text="That one passionate missionary kid/FOP lover", height=30, width=30)
+        Label2.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
         window.mainloop()
     elif c>a and c>b and c>d:
         print("You are a social floater")
         window=tk.Tk()
         window.title("You are ....")
-        Label=tk.Label(master=window, text="Social floater", height=30, width=30)
-        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        Label3=tk.Label(master=window, text="Social floater", height=30, width=30)
+        Label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
         window.mainloop()
     elif d>a and d>b and d>c:
         print("AMDG intent/Little Flowers intent")
         window=tk.Tk()
         window.title("You are ....")
-        Label=tk.Label(master=window, text="AMDG intent/Little Flowers intent", height=30, width=30)
-        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        Label4=tk.Label(master=window, text="AMDG intent/Little Flowers intent", height=30, width=30)
+        Label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
         window.mainloop()
     else:
         print("You are a social floater")
         window=tk.Tk()
         window.title("You are ....")
-        Label=tk.Label(master=window, text="Social floater", height=30, width=30)
-        Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        Label5=tk.Label(master=window, text="Social floater", height=30, width=30)
+        Label5.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
         window.mainloop()
  
 
