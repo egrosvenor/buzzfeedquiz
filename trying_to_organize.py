@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import PhotoImage
-# from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 
 questions={
     'What sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
@@ -127,15 +127,22 @@ def answer():
         print("You are a PDP boy/homeschooled girl")
         window1=tk.Tk()
         window1.title("You are ....")
-        window1.minsize(500,500)
+        window1.minsize(700,500)
         window1.configure(bg="dark green")
+
         Label=tk.Label(master=window1, text="PDP boy/homeschooled girl", font=("Courier", 14, "bold"), bg="dark green")
         Label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
         Label4=tk.Label(master=window1, text="You enjoy long walks to the chapel and liturgy of the hours. Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
         Label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
         img = PhotoImage(file="Chapel-2-1.png")
-        label = tk.Label(window1, image=img)
-        label.pack()
+
+        img = img.subsample(2) 
+ 
+        label = tk.Label(window1, image=img, bg="dark green")
+        label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
         window1.mainloop()
 
     elif b>a and b>c and b>d:
