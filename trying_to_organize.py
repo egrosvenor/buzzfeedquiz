@@ -58,11 +58,8 @@ b=0
 c=0
 d=0
 
-def change(button):
-    button.configure(bg="red")
 
 def fun(x):
-
 
     print(x)
 
@@ -120,7 +117,6 @@ for x in questions:
 
     for e in questions[x]:
         button=tk.Button(master=Frame, text=e, height=7, width=20, command=lambda x=e: fun(x), font=("Courier", 12), bg="tan")
-        button.configure(command=change(button))
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
