@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import PhotoImage
-#from PIL import Image, ImageTk
 
 questions={
     'What intramural sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
