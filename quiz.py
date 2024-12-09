@@ -178,7 +178,7 @@ def answer():
         Label21=tk.Label(master=window4, text="Social Floater", font=("Courier", 14, "bold"), bg="dark green")
         Label21.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know \n everyone on campus. Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
+        Label3=tk.Label(master=window4, text="You don't really have a set group, but you seem to know \n everyone on campus. Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
         Label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         img3 = PhotoImage(file="socialfloater.png")
