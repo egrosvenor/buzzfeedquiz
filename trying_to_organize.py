@@ -174,7 +174,7 @@ def answer():
         Label21=tk.Label(master=window4, text="Social Floater", font=("Courier", 14, "bold"), bg="dark green")
         Label21.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know everyone on campus. \n Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
+        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know \n everyone on campus. Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
         Label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         img3 = PhotoImage(file="socialfloater.png")
@@ -195,7 +195,7 @@ def answer():
         Label31=tk.Label(master=window5, text="AMDG intent/Little Flowers intent", font=("Courier", 14, "bold"), bg="dark green")
         Label31.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        Label4=tk.Label(master=window5, text="You love your household and hanging out with them! Welcome to Franciscan!", height=5, width=15, font=("Courier", 14, "bold"), bg="dark green")
+        Label4=tk.Label(master=window5, text="You love your household and hanging out \n with them! Welcome to Franciscan!", height=5, width=15, font=("Courier", 14, "bold"), bg="dark green")
         Label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         img4 = PhotoImage(file="amdg.png")
@@ -215,7 +215,7 @@ def answer():
         Label21=tk.Label(master=window4, text="Social Floater", font=("Courier", 14, "bold"), bg="dark green")
         Label21.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know everyone on campus. \n Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
+        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know \n everyone on campus. Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
         Label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         img3 = PhotoImage(file="socialfloater.png")
