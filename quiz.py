@@ -59,7 +59,9 @@ c=0
 d=0
 
 
-def fun(x):
+def fun(x, m):
+
+    m.configure(bg="dark green")
 
     print(x)
 
@@ -116,7 +118,8 @@ for x in questions:
     Frame.pack(fill=tk.X, side=tk.TOP)
 
     for e in questions[x]:
-        button=tk.Button(master=Frame, text=e, height=7, width=20, command=lambda x=e: fun(x), font=("Courier", 12), bg="tan")
+        button=tk.Button(master=Frame, text=e, height=7, width=20, font=("Courier", 12), bg="tan")
+        button.configure(command=lambda x=e, m=button: fun(x,m))
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
