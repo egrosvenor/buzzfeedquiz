@@ -3,9 +3,9 @@ from tkinter import PhotoImage
 #from PIL import Image, ImageTk
 
 questions={
-    'What sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
+    'What intramural sport do you play?' : ['ultimate frisbee', 'volleyball', 'soccer', 'no intramurals for me'],
     'Choose a Household': ['AMDG', 'Fishers', 'DDM', 'Stella'],
-    'Favorite Professor?': ['Scott Hahn', 'Dr. Reinhard', 'Dr. Kuebler', 'Dr. Knox'],
+    'Favorite Professor?': ['Scott Hahn', 'Dr. Reinhard', 'Dr. Pathakamuri', 'Dr. Knox'],
     'What is your major?':['theocat', 'nursing', 'business', 'psych'],
     'Favorite Mass time?': ['6:30 AM', '10:00 AM', 'Noon', '8:00 PM'],
     'Favorite Caf meal?': ['pizza', 'stir fry', 'cereal and ice cream', 'chicken and rice'],
@@ -45,13 +45,13 @@ label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
 list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "stir fry", "Dorm","Go on a walk with \n my Franny significant \n other", "every single day", "Working at Summer Camp" ]
 list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "cereal and ice crea", "Library", "Library", "Reading outside", "every other month", "Mission Trip!!"]
-list3=["soccer", "Stella", "Dr. Kuebler", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an \n internship/working" ]
+list3=["soccer", "Stella", "Dr. Pathakamuri", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an \n internship/working" ]
 list4=["AMDG", "volleyball", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
 
 list5=["DDM", "Dr. Reinhard", "Library", "Reading outside", "Mission Trip!!", "ultimate frisbee", "psych", "Noon", "chicken and rice", "every other month"]
 list6=["Fishers", "Scott Hahn", "theocat", "6:30 AM", "Dorm", "Go on a walk with \n my Franny significant \n other", "every single day", "Always studying", "volleyball", "I do not know yet"]
 list7=["no intramurals for me", "Working at Summer Camp", "AMDG", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never" ]
-list8=["stir fry", "cereal and ice cream", "soccer",  "Stella", "Dr. Kuebler", "nursing", "CTT", "Getting an \n internship/working", "10:00 AM", "when my friends go"]
+list8=["stir fry", "cereal and ice cream", "soccer",  "Stella", "Dr. Pathakamuri", "nursing", "CTT", "Getting an \n internship/working", "10:00 AM", "when my friends go"]
 
 a=0
 b=0
