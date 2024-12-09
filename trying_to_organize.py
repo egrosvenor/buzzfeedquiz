@@ -115,7 +115,7 @@ for x in questions:
     Frame.pack(fill=tk.X, side=tk.TOP)
 
     for e in questions[x]:
-        button=tk.Button(master=Frame, text=e, height=7, width=20, command=lambda x=e: fun(x), font=("Courier", 12), bg="pink")
+        button=tk.Button(master=Frame, text=e, height=7, width=20, command=lambda x=e: fun(x), font=("Courier", 12), bg="tan")
         button.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 
