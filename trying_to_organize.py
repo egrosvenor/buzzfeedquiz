@@ -137,57 +137,93 @@ def answer():
         Label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         img = PhotoImage(file="Chapel-2-1.png")
-        label6 = tk.Label(window1, image=img)
-        label6.pack()
- 
-        label = tk.Label(window1, image=img, bg="dark green")
-        label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+        img=img.subsample(2)
+        label6 = tk.Label(window1, image=img, bg="dark green")
+        label6.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
         window1.mainloop()
 
     elif b>a and b>c and b>d:
         print("You are that one passionate missionary kid/FOP lover")
+
         window3=tk.Tk()
         window3.title("You are ....")
-        Label2=tk.Label(master=window, text="That one passionate missionary kid/FOP lover. What's your favorite worship song? How long have you played guitar? Welcome to Franciscan!", height=30, width=30)
+        window3.minsize(700,500)
+        window3.configure(bg="dark green")
+
+        Label11=tk.Label(master=window3, text="That one passionate missionary kid/FOP lover", font=("Courier", 14, "bold"), bg="dark green")
+        Label11.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        Label2=tk.Label(master=window3, text="What's your favorite worship song? \n How long have you played guitar? Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
         Label2.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
         img2 = PhotoImage(file="file.png")
-        label2 = tk.Label(window3, image2=img2)
-        label2.pack()
-        window.mainloop()
+        img2= img2.subsample(4)
+        label2 = tk.Label(window3, image=img2, bg="dark green")
+        label2.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        window3.mainloop()
 
     elif c>a and c>b and c>d:
         print("You are a social floater")
         window4=tk.Tk()
         window4.title("You are ....")
-        Label3=tk.Label(master=window, text="Social floater. You don't really have a group but you seem to know everyone on campus. Welcome to Franciscan!", height=30, width=30)
+        window4.minsize(700,500)
+        window4.configure(bg="dark green")
+
+        Label21=tk.Label(master=window4, text="Social Floater", font=("Courier", 14, "bold"), bg="dark green")
+        Label21.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know everyone on campus. \n Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
         Label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
         img3 = PhotoImage(file="socialfloater.png")
-        label3 = tk.Label(window4, image3=img3)
-        label3.pack()
-        window.mainloop()
+        img3=img3.subsample(4)
+        label3 = tk.Label(window4, image=img3, bg="dark green")
+        label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        window4.mainloop()
 
     elif d>a and d>b and d>c:
         print("AMDG intent/Little Flowers intent")
+
         window5=tk.Tk()
         window5.title("You are ....")
-        Label4=tk.Label(master=window, text="AMDG intent/Little Flowers intent. You love your household and hanging out with them! Welcome to Franciscan!", height=30, width=30)
+        window5.minsize(700,500)
+        window5.configure(bg="dark green")
+
+        Label31=tk.Label(master=window5, text="AMDG intent/Little Flowers intent", font=("Courier", 14, "bold"), bg="dark green")
+        Label31.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        Label4=tk.Label(master=window5, text="You love your household and hanging out with them! Welcome to Franciscan!", height=5, width=15, font=("Courier", 14, "bold"), bg="dark green")
         Label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
         img4 = PhotoImage(file="amdg.png")
-        label4 = tk.Label(window5, image4=img4)
-        label4.pack()
-        window.mainloop()
+        img4=img4.subsample(1)
+        label4 = tk.Label(window5, image=img4,bg="dark green")
+        label4.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        window5.mainloop()
 
     else:
         print("You are a social floater")
-        window6=tk.Tk()
-        window6.title("You are ....")
-        Label5=tk.Label(master=window, text="Social floater. You don't really have a group but you seem to know everyone on campus. Welcome to Franciscan!", height=30, width=30)
-        Label5.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
-        img5 = PhotoImage(file="socialfloater.png")
-        label5 = tk.Label(window6, image5=img5)
-        label5.pack()
-        window.mainloop()
+        window4=tk.Tk()
+        window4.title("You are ....")
+        window4.minsize(700,500)
+        window4.configure(bg="dark green")
+
+        Label21=tk.Label(master=window4, text="Social Floater", font=("Courier", 14, "bold"), bg="dark green")
+        Label21.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        Label3=tk.Label(master=window4, text="You don't really have a group but you seem to know everyone on campus. \n Welcome to Franciscan!", height=5, width=12, font=("Courier", 14, "bold"), bg="dark green")
+        Label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        img3 = PhotoImage(file="socialfloater.png")
+        img3=img3.subsample(4)
+        label3 = tk.Label(window4, image=img3, bg="dark green")
+        label3.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
+
+        window4.mainloop()
  
 
 submit=tk.Button(master=content_frame, text="Sumbit Answers", command=answer, height=2, width=10)
