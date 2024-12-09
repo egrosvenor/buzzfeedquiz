@@ -45,11 +45,11 @@ label.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 list1=["no intramurals for me", "Fishers", "Scott Hahn", "theocat", "6:30 AM", "stir fry", "Dorm","Go on a walk with \n my Franny significant \n other", "every single day", "Working at Summer Camp" ]
 list2=["DDM", "ultimate frisbee", "Dr. Reinhard", "psych", "10:00 AM", "cereal and ice crea", "Library", "Library", "Reading outside", "every other month", "Mission Trip!!"]
 list3=["soccer", "Stella", "Dr. Pathakamuri", "nursing", "Noon", "chicken and rice", "CTT", "Always studying", "when my friends go", "Getting an \n internship/working" ]
-list4=["AMDG", "volleyball", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
+list4=["AMDG", "volleyball", "Dr. Knox", "business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never", "I do not know yet"] 
 
 list5=["DDM", "Dr. Reinhard", "Library", "Reading outside", "Mission Trip!!", "ultimate frisbee", "psych", "Noon", "chicken and rice", "every other month"]
 list6=["Fishers", "Scott Hahn", "theocat", "6:30 AM", "Dorm", "Go on a walk with \n my Franny significant \n other", "every single day", "Always studying", "volleyball", "I do not know yet"]
-list7=["no intramurals for me", "Working at Summer Camp", "AMDG", "Dr. Knox", "Business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never" ]
+list7=["no intramurals for me", "Working at Summer Camp", "AMDG", "Dr. Knox", "business", "8:00 PM", "JC", "pizza", "I am a JC rat", "never" ]
 list8=["stir fry", "cereal and ice cream", "soccer",  "Stella", "Dr. Pathakamuri", "nursing", "CTT", "Getting an \n internship/working", "10:00 AM", "when my friends go"]
 
 a=0
@@ -106,6 +106,8 @@ def fun(x, m):
     elif x in list4 and x in list7: 
         d+=2
         c+=1
+
+    print(f"{a,b,c,d}")
     
 
 
