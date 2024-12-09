@@ -60,6 +60,8 @@ d=0
 
 
 def fun(x):
+
+
     print(x)
 
     global a, b, c, d
@@ -226,7 +228,7 @@ def answer():
         window4.mainloop()
  
 
-submit=tk.Button(master=content_frame, text="Sumbit Answers", command=answer, height=2, width=10)
+submit=tk.Button(master=content_frame, text="Sumbit Answers", command=answer, height=2, width=15, bg="beige", font=("Courier", 14, "bold"))
 submit.pack()
 
     
