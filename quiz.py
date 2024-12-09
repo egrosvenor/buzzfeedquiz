@@ -61,7 +61,7 @@ d=0
 
 def fun(x, m):
 
-    m.configure(bg="dark green")
+    m.configure(bg="dark green", fg="white")
 
     print(x)
 
