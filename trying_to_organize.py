@@ -190,7 +190,7 @@ def answer():
         window.mainloop()
  
 
-submit=tk.Button(master=content_frame, text="Sumbit Answers", command=answer)
+submit=tk.Button(master=content_frame, text="Sumbit Answers", command=answer, height=2, width=10)
 submit.pack()
 
     
