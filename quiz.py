@@ -107,7 +107,6 @@ def fun(x, m):
         d+=2
         c+=1
 
-    print(f"{a,b,c,d}")
     
 
 
